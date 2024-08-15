@@ -1,0 +1,376 @@
+:root {
+    --color-principal: #122F4B;
+    --color-footer: #fff;
+    --color-sombras: grey;
+
+}
+
+/*----------Font--------*/
+@font-face {
+    font-family: "atlantis";
+    src: url(../font/Atlantis.ttf) format("truetype");
+    font-weight: normal;
+}
+
+;
+
+@font-face {
+    font-family: "kadwa";
+    src: url(../font/Kadwa-Regular.ttf) format("truetype"),
+        url(../font/Kadwa-Bold.ttf) format("truetype");
+    font-weight: normal, bold;
+
+}
+
+/* --------Normalice------ */
+html {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+/* -----------Title---------- */
+
+h1 {
+    
+    font-family: "atlantis";
+    font-size: clamp(1.5rem, 1.5rem + 3vw, 3rem);;
+    text-align: center;
+    color: var(--color-principal);
+    margin: 20px 0;
+}
+
+h1::after{
+    content: "Encriptador Web";
+}
+
+/* -------body------ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
+    background-image: url(../assets/Back2.jpg);
+    background-size: cover;
+    background-repeat: round;
+}
+
+/*---------main--------*/
+
+.container_principal {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: #fff;
+    margin: auto;
+    margin-bottom: 5px;
+    border: 0.5px solid var(--color-principal);
+    border-radius: 10px;
+}
+
+.container_encriptar {
+    width: 100%;
+    border: .5px solid var(--color-principal);
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 1px 10px var(--color-principal);
+}
+
+
+.container_encriptar textarea {
+    font-family: "kadwa";
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 30px;
+    border: none;
+    resize: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+}
+
+.container-alerts {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    border: none;
+}
+
+
+.text-required {
+    color: red;
+}
+
+.alert {
+    display: none;
+}
+
+.btn-eraser {
+    background-color: var(--color-footer);
+    width: auto;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------Encriptado---------- */
+
+.container-group {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-encriptado {
+    color: var(--color-principal);
+    text-align: center;
+    font-weight: bold;
+}
+
+.solicitud-encriptado{
+    width: 50%;
+    color: var(--color-principal);
+    font-weight: bold;
+    text-align: center;
+}
+
+.text-desencriptado {
+    width: 100%;
+    min-height: 54vh;
+    padding: 20px;
+    font-family: "kadwa";
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.text-alert{
+    color: var(--color-principal);
+}
+
+.is-active {
+    display: none;
+}
+
+.btn-copy {
+    color: var(--color-footer);
+    background-color: var(--color-principal);
+    font-family: "kadwa";
+    font-size: 1.2rem;
+    padding: 0 40px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* ------Button------- */
+
+.button-order {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 20%;
+    color: var(--color-principal);
+    font-family: "kadwa";
+    font-weight: normal;
+    font-size: 1.4rem;
+    margin: 1.4% 2%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color-principal);
+    transition: box-shadow 0.5s ease-in ;
+}
+
+.btn:hover{
+    box-shadow: 3px 3px 4px var(--color-sombras);
+}
+
+.btn-encriptar {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+/* -----Footer----- */
+footer {
+    background-color: var(--color-footer);
+    position: relative;
+    margin-top:auto;
+    width: 100%;
+    bottom: auto;
+}
+
+footer p {
+    color: var(--color-principal);
+    padding: 5px 0;
+    text-align: center;
+}
+
+
+/* -------Responsive-------- */
+
+@media (max-width: 396px) {
+    html {
+        width: 378px;
+    }
+
+    h1::after{
+        content: "Encriptador Mobile";
+    }
+    
+
+    .container_principal {
+        grid-template-columns: 100%;
+    }
+
+    .container_encriptar,
+    .container_encriptar textarea {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container_encriptar {
+        box-shadow: 0px 2px 10px var(--color-principal);
+    }
+
+    .container_encriptar textarea,
+    .text-desencriptado {
+        height: 40vh
+    }
+
+    .button-order {
+        flex-direction: column;
+    }
+
+    .img-encriptado {
+        color: var(--color-principal);
+        width: 33%;
+        padding: 2%;
+    }
+
+    .btn {
+        width: 80%;
+        margin: 1.4% 2%;
+    }
+
+}
+
+@media (min-width: 396px) {
+
+    h1::after{
+        content: "Encriptador Tablet";
+    }
+
+    .container_principal {
+        grid-template-columns: 100%;
+    }
+
+    .container_encriptar,
+    .container_encriptar textarea {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container_encriptar textarea {
+        height: 40vh
+    }
+
+    .container_encriptar {
+        box-shadow: 0px 2px 10px var(--color-principal);
+    }
+
+    .container_encriptar textarea,
+    .text-desencriptado {
+        height: 40vh
+    }
+
+    .button-order {
+        flex-direction: column;
+    }
+
+    .img-encriptado {
+        color: var(--color-principal);
+        width: 33%;
+        padding: 2%;
+        text-align: center;
+    }
+
+    .btn {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    h1::after{
+        content: "Encriptador Web";
+    }
+
+    .container_principal {
+        grid-template-columns: 100%;
+    }
+
+    .container_encriptar,
+    .container_encriptar textarea {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .container_encriptar {
+        box-shadow: 0px 2px 10px var(--color-principal);
+    }
+
+    .container_encriptar textarea,
+    .text-desencriptado {
+        height: 40vh
+    }
+
+    .button-order {
+        flex-direction: row;
+    }
+
+    .btn {
+        width: 20%;
+    }
+
+    .img-encriptado {
+        color: var(--color-principal);
+        width: 35%;
+        padding: 3%;
+    }
+}
+
+
+@media (min-width: 1020px) {
+    .container_principal {
+        grid-template-columns: 50% 50%;
+    }
+
+    .container_encriptar {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .container_encriptar textarea {
+        height: 53vh;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .img-encriptado {
+        color: var(--color-principal);
+        width: 40%;
+    }
+
+
+}

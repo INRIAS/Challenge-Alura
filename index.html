@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <main>
+        <h1></h1>
+        <section class="container_principal">
+            <section class="container_encriptar ">
+                <textarea id="encriptar" placeholder="Ingrese el texto aqui:"></textarea>
+                <section class="container-alerts">
+                    <p class="text-required alert"><img class="" src="./assets/circle-fill.svg" alt="required"> Se
+                        requiere ingresar un valor...!!! </p>
+                    <p class="text-alert"><img class="" src="./assets/circle-fill.svg" alt="alert"> Solo letras
+                        minúsculas y sin acentos</p>
+                    <button onclick="btnEraser()" class="btn-eraser">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                            style="fill: rgba(18, 47, 75, 1);">
+                            <path
+                                d="m2.586 15.408 4.299 4.299a.996.996 0 0 0 .707.293h12.001v-2h-6.958l7.222-7.222c.78-.779.78-2.049 0-2.828L14.906 3a2.003 2.003 0 0 0-2.828 0l-4.75 4.749-4.754 4.843a2.007 2.007 0 0 0 .012 2.816zM13.492 4.414l4.95 4.95-2.586 2.586L10.906 7l2.586-2.586zM8.749 9.156l.743-.742 4.95 4.95-4.557 4.557a1.026 1.026 0 0 0-.069.079h-1.81l-4.005-4.007 4.748-4.837z">
+                            </path>
+                        </svg>
+                    </button>
+                </section>
+            </section>
+            <section class="container-group">
+                <p class="text-desencriptado is-active" id="encriptado"></p>
+                <img class="img-encriptado" src="./assets/Droopy.svg" alt="Droopy">
+                <p class="solicitud-encriptado">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button onclick="copiarTexto()" type="button" class="btn-copy is-active" id="copybutton">Copiar</button>
+            </section>
+        </section>
+        <section class="button-order">
+            <button onclick="aEncriptado()" type="button" class="btn btn-encriptar">Encriptar</button>
+            <button onclick="aDesencritado()" type="button" class="btn btn-desencriptar">Desencriptar</button>
+        </section>
+    </main>
+    <footer>
+        <p>©Stiven alvarez 2024</p>
+    </footer>
+</body>
+<script src="./js/app.js"></script>
+
+</html>
