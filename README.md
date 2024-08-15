@@ -1,15 +1,15 @@
 # Challenge Alura
 ### Encriptador
 
-## Instalar
+## Como Instalar:
 
 - Descagra el proyecto u clonar repositorio.
 
-## Remomendaciones de Uso
+## Recomendaciones de Uso:
 
  - Descargar todo el contenido para una correcta visualizacion.
 
-## Funcionamiento
+## Funcionamiento:
  - Este prototipo contiene 5 llaves de encriptación-
 
  - Las "llaves" de encriptación que utilizaremos son las siguientes:
@@ -20,6 +20,6 @@
 4. La letra "o" es convertida para "ober"
 5. La letra "u" es convertida para "ufat"
 
-## Restricciones
+## Restricciones:
 
 - Solo incluir minúsculas y sin acentos.
